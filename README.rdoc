@@ -1,28 +1,35 @@
-== README
+== Birds library
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Introduction
+============
 
-Things you may want to cover:
+I have used Roar and its Hypermedia extension to build bird library API along with Representer model. So basically I have created services keeping Abstraction concepts in mind and do things very clear in layered architecture.
 
-* Ruby version
+Steps to run the application :
 
-* System dependencies
+FYI : I have not used mongodb instead I have used mysql due to lack of internet connectivity.
 
-* Configuration
+* rake db:create
+* rake db:migrate
 
-* Database creation
+Requests
+========
+`Format: json`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+ - `GET /birds` - List all birds
+ - `POST /birds` - Add a new bird
+ - `GET /birds/{id}` - Get details on a specific bird
+ - `DELETE /birds/{id}` - Delete a bird by id
+ 
+ 
+ POST
+ ====
+ 
+ ```javascript
+ {
+  name: 
+ }
+ ```
+ 
+ 
+ 
