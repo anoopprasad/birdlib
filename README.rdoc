@@ -11,6 +11,7 @@ FYI : I have not used mongodb instead I have used mysql due to lack of internet 
 
 * rake db:create
 * rake db:migrate
+* rails s
 
 Requests
 ========
@@ -22,14 +23,29 @@ Requests
  - `DELETE /birds/{id}` - Delete a bird by id
  
  
+ GET
+ ===
+ Single record :
+ http://127.0.0.1:3000/birds/1.json
+ 
+ All record :
+ http://127.0.0.1:3000/birds.json
+ 
  POST
  ====
  
- ```javascript
  {
-  name: 
+    "name": "Abert's Towhee",
+    "family": "Melozone aberti",
+    "continents": "America,South Africa",
+    "visible": true
  }
- ```
+
+ Delete
+ ======
+ 
+ Delete http://127.0.0.1:3000/birds/1
+ 
  
  
  
